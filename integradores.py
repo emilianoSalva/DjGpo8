@@ -2,11 +2,6 @@
 Ejercicios integradores
 
 
-
-4. Escribir una función que reciba una cadena de caracteres y devuelva un diccionario con cada
-palabra que contiene y la cantidad de veces que aparece (frecuencia). Escribir otra función
-que reciba el diccionario generado con la función anterior y devuelva una tupla con la
-palabra más repetida y su frecuencia.
 5. Sabiendo que ValueError es la excepción que se lanza cuando no podemos convertir una
 cadena de texto en su valor numérico, escriba una función get_int() que lea un valor entero
 del usuario y lo devuelva, iterando mientras el valor no sea correcto. Intente resolver el
@@ -128,3 +123,27 @@ def contar_palabras(cadena):
 
 print(contar_palabras(input("Ingrese una cadena de caracteres: ")))
 
+# 4. Escribir una función que reciba una cadena de caracteres y devuelva un diccionario con cada palabra que contiene y la cantidad de veces que aparece (frecuencia). Escribir otra función que reciba el diccionario generado con la función anterior y devuelva una tupla con la palabra más repetida y su frecuencia.
+
+
+def mas_repetida (dicc):
+    """
+    La función va a recibir un diccionario.
+    Crea las variables keymax y max para guardar la clave del máximo y el valor máximo.
+    Itera sobre el diccionario recibido, compara en cada iteración si el valor es el máximo.
+    Gerena la tupla y la devuelve
+    """
+    keymax = ''
+    max = 0
+    for key in dicc:
+        print (dicc[key])
+        if dicc[key] >= max:
+            max = dicc[key]
+            keymax = key
+        else:
+            pass
+    tuplamax = (keymax, max)
+    # print (f'Ej4 (print desde mas_repetida): La tupla de valores máximos es: {tuplamax}')
+    return tuplamax
+
+print (mas_repetida(contar_palabras(input("Ej4: Ingrese una cadena de caracteres:  " ))))
