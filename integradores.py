@@ -6,7 +6,6 @@ EJERCICIOS INTEGRADORES
 
 
 # 1. Escribir una función que calcule el máximo común divisor entre dos números.
-"""
 El máximo común divisor (mcd) de dos o más números enteros es el mayor número entero que es divisor común de ellos. Por ejemplo, el mcd de 24 y 36 es 12, ya que 12 es el mayor número entero que divide exactamente a ambos números.
 La fórmula de Euclides es un algoritmo para encontrar el mcd de dos números enteros. La fórmula establece que el mcd de dos números a y b es igual al mcd de b y el resto de la división de a entre b. Esta fórmula se puede aplicar repetidamente hasta que el resto de la división sea cero, momento en el cual el último divisor no nulo será el mcd buscado.
 Por ejemplo, para encontrar el mcd de 24 y 36 utilizando la fórmula de Euclides, se realiza lo siguiente:
@@ -115,7 +114,7 @@ def mas_repetida (dicc):
 print (mas_repetida(contar_palabras(input("Ej4: Ingrese una cadena de caracteres:  " ))))
 
 
-
+"""
 5. Sabiendo que ValueError es la excepción que se lanza cuando no podemos convertir una
 cadena de texto en su valor numérico, escriba una función get_int() que lea un valor entero
 del usuario y lo devuelva, iterando mientras el valor no sea correcto. Intente resolver el
@@ -154,7 +153,7 @@ mayor de edad pero menor de 25 años y falso en caso contrario.
 ● Además, la retirada de dinero sólo se podrá hacer si el titular es válido.
 ● El método mostrar() debe devolver el mensaje de “Cuenta Joven” y la bonificación de la
 cuenta.
-
+"""
 class CuentaJoven(Cuenta):
     def __init__(self, titular, cantidad=0, bonificacion=0):
         super().__init__(titular, cantidad)
@@ -180,6 +179,5 @@ class CuentaJoven(Cuenta):
         print("Cuenta Joven")
         print("Bonificación:", self.__bonificacion, "%")
 
-"""
 
 
