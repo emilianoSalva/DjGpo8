@@ -86,8 +86,8 @@ def mcm_x_euc(a, b):
     """
     Función que calcula el mcm conociendo el MCD entre 2 números enteros por el método de Euclides
     """
-    mcd = mcd(a, b)
-    mcm = (a * b) // mcd
+    mcd_eu = mcd(a, b) # correccion en el nombe, reemplacé "mcd" x "mcd_eu" , no diferenciaba la función de la variable
+    mcm = (a * b) // mcd_eu
     return mcm
 
 print(mcm_x_euc(16, 5))
