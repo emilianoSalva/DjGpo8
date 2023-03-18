@@ -2,14 +2,14 @@
 
 EJERCICIOS INTEGRADORES
 
-
+"""
 
 
 # 1. Escribir una función que calcule el máximo común divisor entre dos números.
+"""
 El máximo común divisor (mcd) de dos o más números enteros es el mayor número entero que es divisor común de ellos. Por ejemplo, el mcd de 24 y 36 es 12, ya que 12 es el mayor número entero que divide exactamente a ambos números.
 La fórmula de Euclides es un algoritmo para encontrar el mcd de dos números enteros. La fórmula establece que el mcd de dos números a y b es igual al mcd de b y el resto de la división de a entre b. Esta fórmula se puede aplicar repetidamente hasta que el resto de la división sea cero, momento en el cual el último divisor no nulo será el mcd buscado.
 Por ejemplo, para encontrar el mcd de 24 y 36 utilizando la fórmula de Euclides, se realiza lo siguiente:
-
 Dividimos 36 entre 24 y obtenemos un cociente de 1 y un resto de 12.
 El mcd de 24 y 36 es igual al mcd de 24 y 12.
 Dividimos 24 entre 12 y obtenemos un cociente de 2 y un resto de 0.
@@ -154,18 +154,21 @@ mayor de edad pero menor de 25 años y falso en caso contrario.
 ● El método mostrar() debe devolver el mensaje de “Cuenta Joven” y la bonificación de la
 cuenta.
 """
+from ej-7 import Cuenta
 class CuentaJoven(Cuenta):
-    def __init__(self, titular, cantidad=0, bonificacion=0):
-        super().__init__(titular, cantidad)
-        self.__bonificacion = bonificacion
-    
-    # Setter
-    def set_bonificacion(self, bonificacion):
+    def __init__(self, __titular, __cantidad=0, bonificacion=0):
+        super().__init__(__titular, __cantidad)
         self.__bonificacion = bonificacion
     
     # Getter
-    def get_bonificacion(self):
+    @property
+    def bonificacion(self):
         return self.__bonificacion
+    
+    # Setter
+    @bonificacion.setter
+    def bonificacion(self, bonificacion):
+        self.__bonificacion = bonificacion
     
     # Métodos
     def es_titular_valido(self, edad):
