@@ -154,6 +154,8 @@ mayor de edad pero menor de 25 años y falso en caso contrario.
 ● El método mostrar() debe devolver el mensaje de “Cuenta Joven” y la bonificación de la
 cuenta.
 """
+from Dj-Gpo8.ej-7 import Cuenta
+ 
 class CuentaJoven(Cuenta):
     def __init__(self, titular, cantidad=0, bonificacion=0):
         super().__init__(titular, cantidad)
